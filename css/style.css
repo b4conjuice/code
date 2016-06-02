@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#content {
+  background: white; }
+
+.word {
+  float: left;
+  width: 20%;
+  height: 40px;
+  text-align: center; }
+
+.blue {
+  color: lightblue; }
+
+.red {
+  color: orangered; }
+
+.black {
+  background: black;
+  color: white; }
+
+@media only screen and (min-device-width: 376px) {
+  #content {
+    height: 375px;
+    width: 667px;
+    font-size: 25px; }
+  #header {
+    height: 146px; }
+  #footer {
+    height: 146px; } }
