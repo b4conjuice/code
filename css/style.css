@@ -3,13 +3,21 @@
   padding: 0; }
 
 #content {
-  background: white; }
+  background: lightgreen;
+  visibility: hidden; }
+
+#board {
+  float: left; }
 
 .word {
   float: left;
   width: 20%;
   height: 40px;
   text-align: center; }
+
+.hideColors .word {
+  color: black !important;
+  background: transparent !important; }
 
 .blue {
   color: lightblue; }
@@ -20,6 +28,15 @@
 .black {
   background: black;
   color: white; }
+
+#footer {
+  float: left;
+  clear: left;
+  width: 100%; }
+
+#toggle {
+  height: 100%;
+  width: 100%; }
 
 @media only screen and (min-device-width: 376px) {
   #content {

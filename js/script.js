@@ -1,6 +1,6 @@
 var wordCount = 25;
 var words = [];
-var indexArray = []
+var indexArray = [];
 
 function getRandom(limit) {
 	if (limit == undefined)
@@ -73,6 +73,11 @@ function start() {
 $(document).ready(function() {
 	init();
 	//start();
+	$('#toggle').click(function() {
+		$('#board').toggleClass('hideColors');
+	});
+	$('#board').addClass('hideColors');
+	$('#content').css('visibility', 'visible');
 });
 
 var wordList = [
