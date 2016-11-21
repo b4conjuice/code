@@ -1,10 +1,16 @@
+$blue: rgb(139, 157, 195);
+$darkBlue: rgb(059, 089, 152);
+$lightBlue: rgb(223, 227, 238);
+$grey: rgb(247, 247, 247);
+$white: rgb(255, 255, 255);
+
 * {
   margin: 0;
   padding: 0;
 }
 
 #content {
-  background: lightgreen;
+  //background: lightgreen;
   visibility: hidden;
 }
 
@@ -15,8 +21,20 @@
 .word {
 	float: left;
 	width: 20%;
-	height: 40px;
-	text-align: center;
+	height: 20%;//40px;
+	//text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.word.unselected:nth-child(odd) {
+  background: $white;
+}
+
+.word.unselected:nth-child(even) {
+  background: $grey;
+  //color: $white;
 }
 
 .hideColors .word {
@@ -25,16 +43,48 @@
 }
 
 .blue {
-	color: lightblue;
+	background: lightblue;
 }
 
 .red {
-	color: orangered;
+	background: orangered;
 }
 
 .black {
 	background: black;
 	color: white;
+}
+
+.neutral {
+  background: yellow;
+}
+
+#menu {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10000;
+  font-size: 20px;
+}
+
+#menu #selected-word {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu #menu-buttons {
+  width: 100%;
+  height: 80%;
+}
+
+#menu #menu-buttons button {
+  float: left;
+  width: 50%;
+  height: 50%;
+  font-size: 20px;
 }
 
 #footer {
@@ -53,7 +103,7 @@
     #content {
         height: 375px;
         width: 667px;
-        font-size: 25px;
+        font-size: 19px;//25px;
     }
 
     #header {
