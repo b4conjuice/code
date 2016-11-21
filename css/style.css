@@ -76,7 +76,8 @@
   #content {
     height: 375px;
     width: 667px;
-    font-size: 19px; }
+    font-size: 19px;
+    font-weight: 700; }
   #header {
     height: 146px; }
   #footer {
