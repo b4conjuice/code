@@ -110,6 +110,10 @@ $(document).ready(function() {
 		$word.off('click');
 
 	})
+	$('#selected-word').click(function() {
+		$('#menu').css('display', 'none');
+		$('#board').css('display', 'block');
+	})
 });
 
 var wordList = [
