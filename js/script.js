@@ -89,7 +89,7 @@ $(document).ready(function() {
 		$('#board').toggleClass('hideColors');
 	});
 	$('#board').addClass('hideColors');
-	$('#content').css('visibility', 'visible');
+	$('#content').css('opacity', 1);
 
 	//testing
 	$('#board').removeClass('hideColors');
@@ -97,13 +97,14 @@ $(document).ready(function() {
 	$('.word').click(function() {
 		var $word = $(this);
 		var word = $word.text();
-		$('#menu').css('display', 'block');
-		$('#board').css('display', 'none');
+		console.log(word);
+		$('#menu').toggleClass('active inactive');
+		$('#board').toggleClass('active inactive');
 		$('#menu #selected-word').text(word);
 	});
 	$('#menu #menu-buttons button').click(function() {
-		$('#menu').css('display', 'none');
-		$('#board').css('display', 'block');
+		$('#menu').toggleClass('active inactive');
+		$('#board').toggleClass('active inactive');
 		var $button = $(this);
 		var word = $('#menu #selected-word').text();
 		console.log(word);
@@ -123,8 +124,8 @@ $(document).ready(function() {
 
 	})
 	$('#selected-word').click(function() {
-		$('#menu').css('display', 'none');
-		$('#board').css('display', 'block');
+		$('#menu').toggleClass('active inactive');
+		$('#board').toggleClass('active inactive');
 	})
 });
 
