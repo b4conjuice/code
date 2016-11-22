@@ -8,7 +8,19 @@ function getRandom(limit) {
 	return Math.floor(Math.random() * limit);
 }
 
+function getRoom() {
+	
+}
+
 function init() {
+	var seed = '';
+	if (window.location.hash) {
+		seed = window.location.hash;
+	} else {
+		seed = wordList[getRandom(wordList.length)];
+		window.location.hash = seed.replace(/ /g, '').toLowerCase();
+	}
+	Math.seedrandom(seed);
 
 	var random = getRandom();
 	var blues = [];
@@ -19,7 +31,7 @@ function init() {
 
 	for (var i = 0; i < 25; i++) {
 		indexArray[i] = i;
-		random = getRandom(wordList.length)
+		random = getRandom(wordList.length);
 		words[i] = wordList[random];
 		wordList.splice(random, 1);
 	}
