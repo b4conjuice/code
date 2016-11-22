@@ -10,6 +10,9 @@ $white: rgb(255, 255, 255);
   font-size: 19px;
   font-weight: 700;
   font-family: Arial;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 #content {
