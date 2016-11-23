@@ -121,6 +121,7 @@ $(document).ready(function() {
 		$('#splash').toggleClass('active inactive');
 		$('#board').toggleClass('active inactive');
 	} else {
+		$('#code').focus();
 		$('#go').click(function() {
 			seed = $('#code').val();
 			console.log(seed);
