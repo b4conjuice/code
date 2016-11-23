@@ -39,7 +39,7 @@ $white: rgb(255, 255, 255);
 }
 
 button:active, .word:active, #selected-word:active {
-  background: $lightBlue;
+  background: $lightBlue !important;
 }
 
 #splash {
