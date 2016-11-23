@@ -22,12 +22,6 @@ input {
   user-select: auto; 
 }
 
-@media screen and (orientation:portrait) and (max-device-width: 375px) {
-  .word {
-    font-size: 10px;
-  }
-}
-
 #content {
   position: relative;
   //background: lightgreen;
@@ -60,6 +54,13 @@ button:active, .word:active, #selected-word:active {
   width: 100%;
 }
 
+#code, #go, #random {
+  font-size: 4em;
+}
+#hello {
+  font-size: 2em
+}
+
 #go, #random {
   border: none;
 }
@@ -75,7 +76,7 @@ button:active, .word:active, #selected-word:active {
 }
 
 #code {
-  font-size: 4em;
+  //font-size: 2em;
 }
 
 .active {
@@ -159,6 +160,17 @@ button:active, .word:active, #selected-word:active {
   width: 100%;
 }
 
+@media screen and (orientation:portrait) and (max-device-width: 375px) {
+  .word {
+    font-size: 10px;
+  }
+  #hello, #code, #go, #random {
+    font-size: 5em;
+  }
+  #hello {
+    font-size: 3em
+  }
+}
 
 @media only screen and (min-device-width: 376px) {
     #content {
