@@ -12,14 +12,7 @@ function getRoom() {
 	
 }
 
-function init() {
-	var seed = '';
-	if (window.location.hash) {
-		seed = window.location.hash;
-	} else {
-		seed = wordList[getRandom(wordList.length)];
-		window.location.hash = seed.replace(/ /g, '').toLowerCase();
-	}
+function init(seed) {
 	Math.seedrandom(seed);
 
 	var random = getRandom();
@@ -72,12 +65,10 @@ function init() {
 	});
 	$('#board').html(boardFeed);
 
-	//start();
 	$('#toggle').click(function() {
 		$('#board').toggleClass('hideColors');
 	});
 	$('#board').addClass('hideColors');
-	$('#content').css('opacity', 1);
 
 	//testing
 	$('#board').removeClass('hideColors');
@@ -116,36 +107,37 @@ function init() {
 	})
 }
 
-function start() {
-	
-
-	$.each(blues, function(index, value) {
-
-	})
-
-}
-
 $(document).ready(function() {
-	var i = document.getElementById("content");
 
-	$('#go').click(function() {
-		$('#splash').toggleClass('active inactive');
-		$('#board').toggleClass('active inactive');
-		// go full-screen
-		// if (i.requestFullscreen) {
-		// 	i.requestFullscreen();
-		// } else if (i.webkitRequestFullscreen) {
-		// 	i.webkitRequestFullscreen();
-		// } else if (i.mozRequestFullScreen) {
-		// 	i.mozRequestFullScreen();
-		// } else if (i.msRequestFullscreen) {
-		// 	i.msRequestFullscreen();
-		// }
-	})
 	$(function() {
 	    FastClick.attach(document.body);
 	});
-	init();
+
+	var seed = '';
+	if (window.location.hash) {
+		seed = window.location.hash.substring(1); //remove hash
+		console.log(seed);
+		init(seed);
+		$('#splash').toggleClass('active inactive');
+		$('#board').toggleClass('active inactive');
+	} else {
+		$('#go').click(function() {
+			seed = $('#code').val();
+			console.log(seed);
+			window.location.hash = seed;
+			init(seed);
+			$('#splash').toggleClass('active inactive');
+			$('#board').toggleClass('active inactive');
+		});
+		$('#random').click(function() {
+			seed = wordList[getRandom(wordList.length)].replace(/ /g, '').toLowerCase();
+			console.log(seed);
+			window.location.hash = seed;
+			init(seed);
+			$('#splash').toggleClass('active inactive');
+			$('#board').toggleClass('active inactive');
+		})
+	}
 });
 
 var wordList = [
