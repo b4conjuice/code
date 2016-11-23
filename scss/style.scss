@@ -16,6 +16,12 @@ $white: rgb(255, 255, 255);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+ @media screen and (orientation:portrait) and (max-device-width: 375px) {
+  .word {
+    font-size: 10px;
+  }
+ }
+
 #content {
   position: relative;
   //background: lightgreen;
