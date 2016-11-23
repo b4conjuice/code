@@ -83,6 +83,9 @@ function start() {
 }
 
 $(document).ready(function() {
+	$(function() {
+	    FastClick.attach(document.body);
+	});
 	init();
 	//start();
 	$('#toggle').click(function() {
@@ -97,7 +100,6 @@ $(document).ready(function() {
 	$('.word').click(function() {
 		var $word = $(this);
 		var word = $word.text();
-		console.log(word);
 		$('#menu').toggleClass('active inactive');
 		$('#board').toggleClass('active inactive');
 		$('#menu #selected-word').text(word);
