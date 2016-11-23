@@ -55,6 +55,10 @@ button:active, .word:active, #selected-word:active {
   width: 100%;
 }
 
+#go, #random {
+  border: none;
+}
+
 #hello {
   display: flex;
   justify-content: center;
