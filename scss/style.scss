@@ -10,16 +10,22 @@ $white: rgb(255, 255, 255);
   font-size: 19px;
   font-weight: 700;
   font-family: Arial;
-  // -webkit-user-select: none;
-  // -moz-user-select: none;
-  // user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
- @media screen and (orientation:portrait) and (max-device-width: 375px) {
+input {
+ -webkit-user-select: auto;
+  -moz-user-select: auto;
+  user-select: auto; 
+}
+
+@media screen and (orientation:portrait) and (max-device-width: 375px) {
   .word {
     font-size: 10px;
   }
- }
+}
 
 #content {
   position: relative;
