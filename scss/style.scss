@@ -73,6 +73,10 @@ button:active, .word:active, #selected-word:active {
   align-items: center;
 }
 
+#code {
+  font-size: 5em;
+}
+
 .active {
   opacity: 1;
   z-index: 10000;
