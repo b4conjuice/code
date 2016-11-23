@@ -83,6 +83,22 @@ function start() {
 }
 
 $(document).ready(function() {
+	var i = document.getElementById("content");
+
+	$('#go').click(function() {
+		$('#splash').toggleClass('active inactive');
+		$('#board').toggleClass('active inactive');
+		// go full-screen
+		if (i.requestFullscreen) {
+			i.requestFullscreen();
+		} else if (i.webkitRequestFullscreen) {
+			i.webkitRequestFullscreen();
+		} else if (i.mozRequestFullScreen) {
+			i.mozRequestFullScreen();
+		} else if (i.msRequestFullscreen) {
+			i.msRequestFullscreen();
+		}
+	})
 	$(function() {
 	    FastClick.attach(document.body);
 	});
