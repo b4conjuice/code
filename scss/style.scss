@@ -26,7 +26,6 @@ $white: rgb(255, 255, 255);
 #content {
   position: relative;
   //background: lightgreen;
-  
   width: 100%;
   height: 100%;
 }
@@ -58,6 +57,10 @@ button:active, .word:active, #selected-word:active {
 
 #go, #random {
   border: none;
+}
+
+#hello, #go {
+  background: $grey;
 }
 
 #hello {
