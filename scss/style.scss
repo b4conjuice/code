@@ -43,6 +43,10 @@ $white: rgb(255, 255, 255);
   height: 100%;
 }
 
+button:active, .word:active, #selected-word:active {
+  background: $lightBlue;
+}
+
 #splash {
   text-align: center;
   display: flex;
