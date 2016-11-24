@@ -24,7 +24,6 @@ input {
 
 #content {
   position: relative;
-  //background: lightgreen;
   width: 100%;
   height: 100%;
 }
@@ -42,10 +41,6 @@ button:active, .word:active, #selected-word:active {
 }
 
 #splash {
-  text-align: center;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 #hello, #code, #go, #random {
@@ -57,27 +52,21 @@ button:active, .word:active, #selected-word:active {
 #code, #go, #random {
   font-size: 4em;
 }
-#hello {
-  font-size: 2em
-}
-
-#go, #random {
-  border: none;
-}
-
-#hello, #go, #random {
-  background: $grey;
-}
 
 #hello {
+  font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $darkBlue;
+  color: $white;
 }
 
-#code {
-  //font-size: 2em;
+#go, #random {
+  background: $grey;
+  color: $darkBlue;
 }
+
 
 .active {
   opacity: 1;
@@ -92,8 +81,7 @@ button:active, .word:active, #selected-word:active {
 .word {
   float: left;
   width: 20%;
-  height: 20%;//40px;
-  //text-align: center;
+  height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +93,6 @@ button:active, .word:active, #selected-word:active {
 
 .word.unselected:nth-child(even) {
   background: $grey;
-  //color: $white;
 }
 
 .hideColors .word {
@@ -176,7 +163,7 @@ button:active, .word:active, #selected-word:active {
     #content {
         height: 375px;
         width: 667px;
-        font-size: 19px;//25px;
+        font-size: 19px;
     }
 
     #header {
