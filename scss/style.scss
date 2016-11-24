@@ -47,14 +47,10 @@ button:active, .word:active, #selected-word:active {
   text-align: center;
   height: 25%;
   width: 100%;
-}
-
-#code, #go, #random {
   font-size: 4em;
 }
 
 #hello {
-  font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,9 +77,13 @@ button:active, .word:active, #selected-word:active {
   text-align: left;
 }
 
-#go, #random {
+#go {
   background: $grey;
-  color: $darkBlue;
+  color: $blue;
+}
+#random {
+  background: $blue;
+  color: $grey;
 }
 
 .active {
@@ -170,9 +170,6 @@ button:active, .word:active, #selected-word:active {
     font-size: 10px;
   }
   #hello, #code, #go, #random {
-    font-size: 5em;
-  }
-  #hello {
     font-size: 3em
   }
 }
