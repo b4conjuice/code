@@ -61,12 +61,30 @@ button:active, .word:active, #selected-word:active {
   background: $darkBlue;
   color: $white;
 }
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+#code {
+  text-align: left;
+}
 
 #go, #random {
   background: $grey;
   color: $darkBlue;
 }
-
 
 .active {
   opacity: 1;
