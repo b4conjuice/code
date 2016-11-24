@@ -121,10 +121,13 @@ $(document).ready(function() {
 		$('#splash').toggleClass('active inactive');
 		$('#board').toggleClass('active inactive');
 	} else {
-		$('#go').click(go);
-		$('#code').on('keyup', function(e) {
-			if (e.keyCode == 13)
-				go();
+		$('#go').click(function() {
+			seed = $('#code').val();
+			console.log(seed);
+			window.location.hash = seed;
+			init(seed);
+			$('#splash').toggleClass('active inactive');
+			$('#board').toggleClass('active inactive');
 		});
 		$('#random').click(function() {
 			seed = wordList[getRandom(wordList.length)].replace(/ /g, '').toLowerCase();
@@ -136,15 +139,6 @@ $(document).ready(function() {
 		})
 	}
 });
-
-function go() {
-	seed = $('#code').val();
-	console.log(seed);
-	window.location.hash = seed;
-	init(seed);
-	$('#splash').toggleClass('active inactive');
-	$('#board').toggleClass('active inactive');
-}
 
 var wordList = [
 	// 'africa',
