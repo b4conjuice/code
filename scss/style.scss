@@ -47,7 +47,7 @@ button:active, .word:active, #selected-word:active {
   text-align: center;
   height: 25%;
   width: 100%;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 #hello {
@@ -56,6 +56,7 @@ button:active, .word:active, #selected-word:active {
   align-items: center;
   background: $darkBlue;
   color: $white;
+  font-size: 4em;
 }
 ::-webkit-input-placeholder {
    text-align: center;
@@ -170,8 +171,11 @@ button:active, .word:active, #selected-word:active {
   .word {
     font-size: 10px;
   }
-  #hello, #code, #go, #random {
-    font-size: 3em
+  #hello {
+    font-size: 3em;
+  }
+  #code, #go, #random {
+    font-size: 2.5em;
   }
 }
 
