@@ -121,13 +121,18 @@ $(document).ready(function() {
 		$('#splash').toggleClass('active inactive');
 		$('#board').toggleClass('active inactive');
 	} else {
-		$('#go').click(function() {
+		function go() {
 			seed = $('#code').val();
 			console.log(seed);
 			window.location.hash = seed;
 			init(seed);
 			$('#splash').toggleClass('active inactive');
 			$('#board').toggleClass('active inactive');
+		}
+		$('#go').click(go);
+		$('#code').on('keyup', function(e) {
+			if (e.keyCode == 13)
+				go();
 		});
 		$('#random').click(function() {
 			seed = wordList[getRandom(wordList.length)].replace(/ /g, '').toLowerCase();
