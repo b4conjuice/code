@@ -105,6 +105,11 @@ button:active, .word:active, #selected-word:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.word.unselected {
+  color: black;
 }
 
 .word.unselected:nth-child(odd) {
@@ -121,20 +126,20 @@ button:active, .word:active, #selected-word:active {
 }
 
 .blue {
-  background: lightblue;
+  background: rgb(72, 124, 167);
 }
 
 .red {
-  background: orangered;
+  background: rgb(201, 35, 49);
 }
 
 .black {
-  background: black;
+  background: rgb(72, 70, 67);
   color: white;
 }
 
 .neutral {
-  background: yellow;
+  background: rgb(216, 203, 158);
 }
 
 #menu #selected-word {
@@ -154,6 +159,7 @@ button:active, .word:active, #selected-word:active {
   float: left;
   width: 50%;
   height: 50%;
+  color: white;
 }
 
 #footer {
